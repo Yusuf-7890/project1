@@ -7,9 +7,12 @@ pipeline{
             }
         }
         stage{
-            steps(test){
+            steps('test'){
                 sh 'testing the environment'
             }
+        }
+        stage{
+            steps('Deploy')
         }
     }
 }
